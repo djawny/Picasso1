@@ -1,7 +1,7 @@
 package com.sdaacademy.jawny.daniel.picasso1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 .error(R.drawable.error_image)
                 .into(mImageView2);
         Picasso.with(this)
-                .load("file://storage/emulated/0/dcim/camera/piwo.jpg")
+                .load("file://storage/emulated/0/DCIM/Camera/piwo.jpg")
                 .error(R.drawable.error_image)
                 .into(mImageView3);
         Picasso.with(this)
