@@ -1,5 +1,6 @@
 package com.sdaacademy.jawny.daniel.picasso1;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setImageViews() {
+        String path = "/storage/emulated/0/DCIM/Camera/piwo.jpg";
         Picasso.with(this)
                 .load("https://goo.gl/JfEm9H")
                 .error(R.drawable.error_image)
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 .error(R.drawable.error_image)
                 .into(mImageView2);
         Picasso.with(this)
-                .load("file://storage/emulated/0/DCIM/Camera/piwo.jpg")
+                .load("file://" + path)
                 .error(R.drawable.error_image)
                 .into(mImageView3);
         Picasso.with(this)
