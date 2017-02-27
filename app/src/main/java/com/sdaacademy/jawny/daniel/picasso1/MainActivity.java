@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -31,6 +33,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setImageViews() {
-        
+
+        Picasso.with(this)
+                .load("https://goo.gl/JfEm9H")
+                .error(R.drawable.error_image)
+                .into(mImageView1);
+        Picasso.with(this)
+                .load(R.drawable.moto)
+                .error(R.drawable.error_image)
+                .into(mImageView2);
+        Picasso.with(this)
+                .load("file://storage/emulated/0/piwo.jpg")
+                .error(R.drawable.error_image)
+                .into(mImageView3);
+        Picasso.with(this)
+                .load("https://goo.gl/JfEm9H3")
+                .error(R.drawable.error_image)
+                .into(mImageView4);
     }
 }
