@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setImageViews() {
-
         Picasso.with(this)
                 .load("https://goo.gl/JfEm9H")
                 .error(R.drawable.error_image)
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 .error(R.drawable.error_image)
                 .into(mImageView2);
         Picasso.with(this)
-                .load("file://storage/emulated/0/piwo.jpg")
+                .load("file://storage/emulated/0/dcim/camera/piwo.jpg")
                 .error(R.drawable.error_image)
                 .into(mImageView3);
         Picasso.with(this)
