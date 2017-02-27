@@ -2,7 +2,6 @@ package com.sdaacademy.jawny.daniel.picasso1;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -59,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         if (status == PackageManager.PERMISSION_GRANTED) {
             Picasso.with(this)
                     .load("file:///storage/emulated/0/DCIM/Camera/piwo.jpg")
-                    .error(R.drawable.error_image)
+                    .fit()
+                    .centerInside()
                     .into(mImageView3);
         } else {
             String[] allPermissions = {Manifest.permission.READ_EXTERNAL_STORAGE};
@@ -75,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
             if (result == PackageManager.PERMISSION_GRANTED) {
                 Picasso.with(this)
                         .load("file:///storage/emulated/0/DCIM/Camera/piwo.jpg")
-                        .error(R.drawable.error_image)
+                        .fit()
+                        .centerInside()
                         .into(mImageView3);
             }
         }
